@@ -1,0 +1,79 @@
+body{
+  background-color: #1D4434;
+  height: 100vh;
+  font-family: "Lato", "Noto Sans JP";
+  color: #333333;
+}
+
+#game-field{
+  height: 100vh;
+}
+
+.centering{
+  /* flexboxでcentering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  width: 30vw;
+  min-width: 300px;
+}
+.card::before{
+  content:"";
+  display: block;
+  padding-top: 132%; /*疑似要素で縦横比を4:3に固定*/
+}
+.content{
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.bg-card{
+  background-color: #C17345;
+}
+
+.bg-discription{
+  background-color: #BAA592;
+}
+
+.fw-900{
+  font-weight: 900;
+}
+
+.fs-0p8em{
+  font-size: .8em;
+}
+
+.fs-2em{
+  font-size: 2em;
+}
+
+.h-15{
+  height: 15%;
+}
+
+.h-40{
+  height: 40%;
+}
+
+.h-45{
+  height: 45%;
+}
+
+.w-40{
+  width: 40%;
+}
+
+#target-enemy{
+  transform: rotate(180deg);
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card{
+    width: 12vw;
+  }
+}
